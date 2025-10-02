@@ -24,7 +24,7 @@
 
 <div style="margin-top: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 5px;">
     <strong>Current Status:</strong> 
-    {{ 'Completed ✅' if task.completed else 'Pending ⏳' }}
+    {{ 'Completed ✅' if task.completed else 'Pending' }}
     <br>
     <strong>Created:</strong> {{ task.created_at.strftime('%Y-%m-%d %H:%M') }}
     {% if task.updated_at != task.created_at %}
