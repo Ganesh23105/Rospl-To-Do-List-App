@@ -113,10 +113,6 @@ if __name__ == '__main__':
     # Create templates directory if it doesn't exist
     if not os.path.exists('templates'):
         os.makedirs('templates')
-    
-    # Create static directory if it doesn't exist
-    if not os.path.exists('static'):
-        os.makedirs('static')
         
     # Add some sample tasks for demonstration
     tasks.extend([

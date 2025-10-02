@@ -32,8 +32,16 @@ A simple, elegant web-based to-do list application built with Python Flask. This
    cd flask-todo-app
    ```
 
-2. **Install Flask**
+2. **Install Dependencies**
    ```bash
+   # You should first create a virtual environment (recommended)
+   python -m venv venv
+   source venv/bin/activate  # On Linux/macOS
+   .\venv\Scripts\activate   # On Windows
+
+   # Then install dependencies. If a requirements.txt file exists:
+   pip install -r requirements.txt
+   # Otherwise (for now):
    pip install flask
    ```
 
@@ -49,9 +57,8 @@ A simple, elegant web-based to-do list application built with Python Flask. This
    └── README.md
    ```
 
-4. **Create the templates**
-   - Create a `templates/` directory
-   - Copy the HTML template code from `app.py` comments into separate files
+4. **Check the Project Structure**
+   The repository already contains the necessary template files in the `templates/` directory. No manual copying is required after cloning.
 
 ### Running the Application
 
@@ -119,6 +126,8 @@ class Task:
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
 ```
+### Key Imports
+The application relies on `datetime` for timestamping and `os` (though currently unused for its main purpose) for checking directory existence.
 
 #### Main Routes
 - `/` - Display all tasks
